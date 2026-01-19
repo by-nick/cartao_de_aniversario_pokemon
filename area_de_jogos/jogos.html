@@ -3,16 +3,192 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Joguinhos</title>
-    <link rel="shortcut icon" href="../favicon/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style02.css">
+    <title>Jogos Pokémon - Divirta-se!</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style02.css">
+    <link rel="shortcut icon" href="../favicon/favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <main>
+    <div class="container">
+        <header>
+            <h1>🎮 JOGOS POKÉMON 🎮</h1>
+            <p class="subtitle">Escolha um jogo e divirta-se!</p>
+            <a href="../area_principal/index.html" rel="prev">
+                <p style="font-family: 'press start 2p', sans-serif; color: #A7D5F2;">Voltar ao Cartão</p>
+            </a>
+        </header>
+        
+        <div class="games-container">
+            <div class="game-tabs">
+                <button class="game-tab active" data-game="quiz">
+                    <i class="fas fa-question-circle"></i> Quiz Pokémon
+                </button>
+                <button class="game-tab" data-game="memory">
+                    <i class="fas fa-brain"></i> Memória Pokémon
+                </button>
+                <button class="game-tab" data-game="catch">
+                    <i class="fas fa-baseball-ball"></i> Captura Pokémon
+                </button>
+            </div>
+            
+            <!-- Jogo 1: Quiz Pokémon -->
+            <div class="game-content active" id="quiz-game">
+                <div class="game-header">
+                    <h2 class="game-title">QUIZ POKÉMON</h2>
+                    <div class="game-stats">
+                        <div class="stat-box">
+                            <span class="stat-label">Pontuação</span>
+                            <span class="stat-value" id="quiz-score">0</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-label">Pergunta</span>
+                            <span class="stat-value" id="question-number">1/5</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="game-instructions">
+                    <p>Teste seus conhecimentos sobre Pokémon! Responda corretamente para ganhar pontos.</p>
+                </div>
+                
+                <div class="quiz-container">
+                    <div class="quiz-question" id="quiz-question">
+                        Carregando pergunta...
+                    </div>
+                    
+                    <div class="quiz-options" id="quiz-options">
+                        <!-- Opções serão preenchidas por JavaScript -->
+                    </div>
+                    
+                    <div class="game-controls">
+                        <button class="game-btn" id="submit-answer">
+                            <i class="fas fa-paper-plane"></i> Responder
+                        </button>
+                        <button class="game-btn secondary" id="next-question" style="display: none;">
+                            <i class="fas fa-forward"></i> Próxima
+                        </button>
+                        <button class="game-btn tertiary" id="reset-quiz">
+                            <i class="fas fa-redo"></i> Reiniciar Quiz
+                        </button>
+                    </div>
+                    
+                    <div class="quiz-feedback" id="quiz-feedback"></div>
+                </div>
+            </div>
+            
+            <!-- Jogo 2: Memória Pokémon -->
+            <div class="game-content" id="memory-game">
+                <div class="game-header">
+                    <h2 class="game-title">MEMÓRIA POKÉMON</h2>
+                    <div class="game-stats">
+                        <div class="stat-box">
+                            <span class="stat-label">Movimentos</span>
+                            <span class="stat-value" id="moves">0</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-label">Pares</span>
+                            <span class="stat-value" id="pairs">0/8</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-label">Tempo</span>
+                            <span class="stat-value" id="timer">00:00</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="game-instructions">
+                    <p>Encontre os pares de Pokémon iguais! Clique nas cartas para virá-las.</p>
+                </div>
+                
+                <div class="memory-grid" id="memory-grid">
+                    <!-- Cartas serão geradas por JavaScript -->
+                </div>
+                
+                <div class="game-controls">
+                    <button class="game-btn" id="start-memory">
+                        <i class="fas fa-play"></i> Iniciar Jogo
+                    </button>
+                    <button class="game-btn secondary" id="restart-memory">
+                        <i class="fas fa-redo"></i> Reiniciar
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Jogo 3: Captura Pokémon -->
+            <div class="game-content" id="catch-game">
+                <div class="game-header">
+                    <h2 class="game-title">CAPTURA POKÉMON</h2>
+                    <div class="game-stats">
+                        <div class="stat-box">
+                            <span class="stat-label">Capturas</span>
+                            <span class="stat-value" id="catches">0</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-label">Tentativas</span>
+                            <span class="stat-value" id="attempts">0</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-label">Recorde</span>
+                            <span class="stat-value" id="record">0</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="game-instructions">
+                    <p>Tente capturar o Pokémon! Clique na Pokébola para lançá-la.</p>
+                    <p class="accuracy">Precisão: <span id="accuracy">0%</span></p>
+                </div>
+                
+                <div class="catch-container">
+                    <div class="catch-area" id="catch-area">
+                        <div class="catch-info">
+                            Pokémon: <span id="current-pokemon">Pikachu</span>
+                            | Dificuldade: <span id="difficulty">Fácil</span>
+                        </div>
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png" 
+                             alt="Pokémon" class="pokemon-to-catch" id="pokemon-to-catch">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Pok%C3%A9_Ball_icon.svg" 
+                             alt="Pokébola" class="pokeball-throw" id="pokeball-throw">
+                    </div>
+                    
+                    <div class="game-controls">
+                        <button class="game-btn catch-btn" id="throw-ball">
+                            <i class="fas fa-baseball-ball"></i> Lançar Pokébola!
+                        </button>
+                        <button class="game-btn secondary" id="change-pokemon">
+                            <i class="fas fa-random"></i> Trocar Pokémon
+                        </button>
+                        <button class="game-btn tertiary" id="reset-catch">
+                            <i class="fas fa-redo"></i> Resetar Jogo
+                        </button>
+                    </div>
+                    
+                    <div class="pokemon-selector">
+                        <p>Escolha um Pokémon para capturar:</p>
+                        <div class="pokemon-options">
+                            <div class="pokemon-option" data-pokemon="pikachu" data-id="25">
+                                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png" alt="Pikachu">
+                                <span>Pikachu</span>
+                            </div>
+                            <div class="pokemon-option" data-pokemon="gengar" data-id="94">
+                                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/94.png" alt="Gengar">
+                                <span>Gengar</span>
+                            </div>
+                            <div class="pokemon-option" data-pokemon="charizard" data-id="6">
+                                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png" alt="Charizard">
+                                <span>Charizard</span>
+                            </div>
+                            <div class="pokemon-option" data-pokemon="eevee" data-id="133">
+                                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/133.png" alt="Eevee">
+                                <span>Eevee</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-    </main>
-    
+    <script src="script02.js"></script>
 </body>
 </html>
