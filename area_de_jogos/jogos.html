@@ -6,6 +6,7 @@
     <title>Jogos Pokémon - Divirta-se!</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="jogos-style.css">
     <link rel="stylesheet" href="style02.css">
     <link rel="shortcut icon" href="../favicon/favicon.ico" type="image/x-icon">
 </head>
@@ -14,9 +15,9 @@
         <header>
             <h1>🎮 JOGOS POKÉMON 🎮</h1>
             <p class="subtitle">Escolha um jogo e divirta-se!</p>
-            <a href="../area_principal/index.html" rel="prev">
-                <p style="font-family: 'press start 2p', sans-serif; color: #A7D5F2;">Voltar ao Cartão</p>
-            </a>
+                <a href="../area_principal/index.html">
+                    <p style="font-family: 'press start 2p', sans-serif;">Voltar ao cartão</p>
+                </a>
         </header>
         
         <div class="games-container">
@@ -99,6 +100,7 @@
                 
                 <div class="game-instructions">
                     <p>Encontre os pares de Pokémon iguais! Clique nas cartas para virá-las.</p>
+                    <p><strong>Dica:</strong> Pikachu ⚡, Bulbasaur 🌱, Charmander 🔥, Squirtle 💧, Gengar 👻, Eevee 🦊, Jigglypuff 🎤, Snorlax 😴</p>
                 </div>
                 
                 <div class="memory-grid" id="memory-grid">
@@ -153,7 +155,7 @@
                     </div>
                     
                     <div class="game-controls">
-                        <button class="game-btn catch-btn" id="throw-ball">
+                        <button class="game-btn" id="throw-ball">
                             <i class="fas fa-baseball-ball"></i> Lançar Pokébola!
                         </button>
                         <button class="game-btn secondary" id="change-pokemon">
@@ -167,7 +169,7 @@
                     <div class="pokemon-selector">
                         <p>Escolha um Pokémon para capturar:</p>
                         <div class="pokemon-options">
-                            <div class="pokemon-option" data-pokemon="pikachu" data-id="25">
+                            <div class="pokemon-option selected" data-pokemon="pikachu" data-id="25">
                                 <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png" alt="Pikachu">
                                 <span>Pikachu</span>
                             </div>

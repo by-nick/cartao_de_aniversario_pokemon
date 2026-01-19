@@ -1,0 +1,80 @@
+/*!****************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./src/public/mainapp/components/GifRestrictedMessage.scss ***!
+  \****************************************************************************************************************************************************************************************************************************************************/
+.GifRestrictedMessage {
+  background-color: #F5F5F5;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  color: #000000;
+}
+.GifRestrictedMessage .header {
+  font-size: 20px;
+  margin: 0;
+  margin-bottom: 8px;
+  font-weight: 600;
+  font-family: "Inter", helvetica, arial, sans-serif;
+}
+@supports (font-variation-settings: normal) {
+  .GifRestrictedMessage .header {
+    font-family: "Inter var", helvetica, arial, sans-serif;
+  }
+}
+.GifRestrictedMessage .msg {
+  font-size: 12px;
+  line-height: 16px;
+  margin: 0;
+  font-weight: 400;
+  font-family: "Inter", helvetica, arial, sans-serif;
+}
+@supports (font-variation-settings: normal) {
+  .GifRestrictedMessage .msg {
+    font-family: "Inter var", helvetica, arial, sans-serif;
+  }
+}
+.GifRestrictedMessage a {
+  font-size: 12px;
+  line-height: 16px;
+  margin: 0;
+  font-weight: 400;
+  font-family: "Inter", helvetica, arial, sans-serif;
+}
+@supports (font-variation-settings: normal) {
+  .GifRestrictedMessage a {
+    font-family: "Inter var", helvetica, arial, sans-serif;
+  }
+}
+/*!********************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./src/public/mainapp/components/ProfileImage.scss ***!
+  \********************************************************************************************************************************************************************************************************************************************/
+.ProfileImage {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  background-size: cover;
+  border-radius: 50%;
+  margin: 5px;
+  margin-left: 5px;
+  margin-right: 10px;
+}
+html[dir=rtl] .ProfileImage {
+  margin-left: 10px;
+  margin-right: 5px;
+}
+.ProfileImage {
+  text-align: center;
+  line-height: 40px;
+  color: white;
+  font-size: 23px;
+  vertical-align: top;
+  font-weight: 600;
+  font-family: "Inter", helvetica, arial, sans-serif;
+}
+@supports (font-variation-settings: normal) {
+  .ProfileImage {
+    font-family: "Inter var", helvetica, arial, sans-serif;
+  }
+}
