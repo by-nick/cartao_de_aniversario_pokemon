@@ -1,0 +1,22 @@
+@charset 'UTF-8';
+/* Importações */
+
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+
+/* decorações */
+
+body{
+    background-image: linear-gradient(to right, #0367A6, #011140, #010326);
+    font: Bold 200 20px 'Courier New', Courier, 'Lucida console', Monaco, mono;
+}
+h1{
+    font: normal 400 70px 'Pixelify Sans', Sans-serif ;
+    text-shadow: 1px 1px 2px black;
+    color: #004875/*#ddff00*/;
+    text-align: center;
+}
+p{
+    font: normal 300 20px 'Courier New', Courier, 'Lucida console', Monaco, monospace;
+    color: #038be0;text-align: justify;
+}
